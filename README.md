@@ -44,7 +44,8 @@ The purpose of this application is to show how I can use HTML, CSS, JS and etc. 
 
 - Karen Bourgeois,
 - UNB/Edx,
-- https://www.joshwcomeau.com/css/custom-css-reset/
+- https://www.joshwcomeau.com/css/custom-css-reset/,
+- iso.500px.com
 
 ## Badges
 
