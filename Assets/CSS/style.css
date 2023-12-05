@@ -2,6 +2,7 @@
   font-family: 'poppins';
   font-size: 15px;
   color: slateblue;
+  margin: 20px;
 };
 
 .header {
@@ -9,9 +10,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   padding: 20px 40px;
   background-color: lightcoral;
-  
+  margin: 20px;
 };
 
 #search {
@@ -20,5 +22,5 @@
 };
 
 .main-title {
-  pading
+  padding: 50%;
 }
