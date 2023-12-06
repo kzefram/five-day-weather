@@ -10,12 +10,12 @@ var weatherAPIKey = '4edbc2e4e408c4f8b63a6eb2e13be206';
 var weatherEndPoint = 'https://api.openweathermap.org/data/2.5/weather?units=metric&appid=' + weatherAPIKey;
 
 
-searchInp.addEventListener('keydown', async (e) => {
-    if(e.keyCode === 13) {
-        let currentWeather = await byCityNameWeather(searchInp.value);
-        console.log(currentWeather);
-    }
-})
+// searchInp.addEventListener('keydown', async (e) => {
+//     if(e.keyCode === 13) {
+//         let currentWeather = await byCityNameWeather(searchInp.value);
+//         console.log(currentWeather);
+//     }
+// })
 
 searchInp.addEventListener('click', async (e) => {
     if(e) {
@@ -31,4 +31,3 @@ var byCityNameWeather = async (city) => {
     return currentWeather;
 }
 
-byCityNameWeather('Moncton')

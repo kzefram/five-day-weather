@@ -3,7 +3,12 @@
   font-size: 15px;
   color: slateblue;
   margin: 20px;
+  
 };
+
+body {
+  background-color: white;
+}
 
 .header {
   display: flex;
@@ -14,13 +19,46 @@
   padding: 20px 40px;
   background-color: lightcoral;
   margin: 20px;
-};
+}
 
-#search {
+.search {
   padding: auto;
   text-align: center;
+  width: 550px;
 };
 
 .main-title {
-  padding: 50%;
+  display: flex;
+  justify-content: center;
+  margin-left: 700px;
 }
+
+.main-submit {
+  width: 200px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.left-Box {
+  float: left;
+  height: 550px;
+  width: 600px;
+  background-color: antiquewhite;
+}
+
+.Right-Box {
+  width: 600px;
+  background-color: antiquewhite;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
