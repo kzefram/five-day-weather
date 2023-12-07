@@ -24,7 +24,7 @@ body {
 .search {
   padding: auto;
   text-align: center;
-  width: 550px;
+  width: 100%px;
 };
 
 .main-title {
@@ -61,4 +61,29 @@ footer {
   display: flex;
   justify-content: center;
 }
+
+@media screen and (max-width: 975px) {
+  .Right-Box {
+    width: 100%;
+  }
+  .left-Box {
+    width: 100%;
+  }
+};
+
+@media screen and (max-width: 668px) {
+  .main-submit {
+    padding-top: 25px;
+    margin: 25px;
+  }
+
+  .search {
+    width: 100%;
+    padding-bottom: 25px;
+  }
+
+  .copyright {
+    display:block;
+  }
+};
 
