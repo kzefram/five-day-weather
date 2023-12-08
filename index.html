@@ -23,7 +23,7 @@
 
 <header class="header">
     <center>
-      <input type="search" placeholder="Enter City Name" class="search">
+      <input type="text" placeholder="Enter City Name" class="search">
       <button class="main-submit" onclick="search">Submit</button>
     </center>
 </header>
@@ -32,25 +32,24 @@
 
     <h1 class="main-title">Travel Weather</h1>
 
-    <section class="content">
-        <section class="Right-Box">
-            <h2>Details</h2>
-            <p class="city">City: </p>
-            <p class="date">Date: </p>
-            <p class="humidity">humidity: </p>
-            <p class="wind">Wind: </p>
-            <p class="temperature">Temperature: </p>
-        </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">City</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 temperature">temperature:</div>
+            <div class="col-sm-12 col-md-6 humidity">Humidity:</div>
+            <div class="col-sm-12 col-md-6 wind">Wind:</div>
+            <div class="col-sm-12 col-md-6 preassure">preassure</div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12">5-Day Forcast</div>
+            <div class="col-12">days</div>
+        </div>
+    </div>
 
-        <section class="left-Box">
-            <h2>5-day Forcast</h2>
-            <p class="card">Monday</p>
-            <p class="card">Tuesday</p>
-            <p class="card">Wenesday</p>
-            <p class="card">Thursday</p>
-            <p class="card">Friday</p>
-        </section>
-    </section>
+   
 
 </main>
     
