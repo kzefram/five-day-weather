@@ -19,7 +19,7 @@
     <title>Travel Weather</title>
 </head> 
 
-<body class="body" style="background-image: url('artem-balashevsky-c6SKh5oPavc-unsplash.jpg'); background-size: cover; background-repeat: no-repeat;">
+<body class="body" style="background-image: url('artem-balashevsky-c6SKh5oPavc-unsplash.jpg'); background-size: cover; background-repeat: no-repeat; color: #66ff66;">
 
 <header class="header">
     <center>
@@ -31,23 +31,23 @@
 
 <main>
     <div class="container">
-        <div class="row">
+        <div class="row" hidden>
             <div class="col-12 ">City</div>
         </div>
-        <div class="row">
+        <div class="row" hidden>
             <div class="col-sm-12 col-md-6 temp">temperature: <div class="temperature"></div></div>
             <div class="col-sm-12 col-md-6 humid">Humidity: <div class="humidity"></div></div>
-            <div class="col-sm-12 col-md-6 #wind">Wind: <div class="wind"></div></div>
+            <div class="col-sm-12 col-md-6 wind">Wind: <div class="winds"></div></div>
             <div class="col-sm-12 col-md-6 press">preassure: <div class="preassure"></div></div>
         </div>
         <hr>
-        <div class="row">
+        <div class="row" hidden>
             <div class="col-12">5-Day Forcast</div>
-            <div class="col-12 day1"></div>
-            <div class="col-12 day2"></div>
-            <div class="col-12 day3"></div>
-            <div class="col-12 day4"></div>
-            <div class="col-12 day5"></div>
+            <div class="col-12 day1 card text-center bg-success bg-opacity-25"></div>
+            <div class="col-12 day2 card text-center bg-success bg-opacity-25"></div>
+            <div class="col-12 day3 card text-center bg-success bg-opacity-25"></div>
+            <div class="col-12 day4 card text-center bg-success bg-opacity-25"></div>
+            <div class="col-12 day5 card text-center bg-success bg-opacity-25"></div>
         </div>
     </div>
 
