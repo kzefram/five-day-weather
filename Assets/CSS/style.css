@@ -29,6 +29,13 @@ main {
     padding-bottom: 15px;
 }
 
+.card {
+    border: #66ff66;
+    border-radius: 30px;
+    height: 30px;
+    width: 25px;
+}
+
 footer {
     text-align: center;
     padding-top: 100px;
