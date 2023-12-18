@@ -26,7 +26,7 @@ function citySubmit(cityInput) {
   var latitude = 0; 
   var longitude = 0; 
 
-  var apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${keyAPIWeather}&units=metric;`
+  var apiUrl = `${weatherApiRootUrl}/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=imperial&appid=${keyAPIWeather};`
 
   fetch(apiUrl)
     .then(response => response.json())
