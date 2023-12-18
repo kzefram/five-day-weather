@@ -1,4 +1,4 @@
-var keyAPIWeather = "4edbc2e4e408c4f8b63a6eb2e13be206";
+var keyAPIWeather = "a49f6674d7c42aca933797552831da83";
 // https://api.openweathermap.org/data/3.0/onecall?lat=
 
 
@@ -26,7 +26,7 @@ function citySubmit(cityInput) {
   var latitude = 0; // Replace with actual latitude
   var longitude = 0; // Replace with actual longitude
 
-  var apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${keyAPIWeather}&units=metric`;
+  var apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${keyAPIWeather}&units=metric;`
 
   fetch(apiUrl)
     .then(response => response.json())
