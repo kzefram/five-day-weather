@@ -1,5 +1,6 @@
 var keyAPIWeather = "a49f6674d7c42aca933797552831da83";
-// https://api.openweathermap.org/data/3.0/onecall?lat=
+var forecastApiRootUrl ="https://api.openweathermap.org/data/2.5/forecast?"
+var currentWeatherUrl ="https://api.openweathermap.org/data/2.5/weather?"
 
 
 var search = document.querySelector('.search');
@@ -23,16 +24,17 @@ btn.addEventListener('click', function () {
 
 function citySubmit(cityInput) {
   // Convert city name to coordinates
-  var latitude = 0; 
-  var longitude = 0; 
+  var latitude = 20.98; 
+  var longitude = -71.98; 
 
-  var apiUrl = `${weatherApiRootUrl}/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=imperial&appid=${keyAPIWeather};`
+  var apiUrl = `${currentWeatherUrl}lat=${latitude}&lon=${longitude}&units=metric&appid=${keyAPIWeather}`
+
 
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
       var currentWeather = data.current;
-      
+      console.log(data);
 
       // Extracting the relevant information from the API response
       var temperature = currentWeather.temp;
@@ -48,7 +50,7 @@ function citySubmit(cityInput) {
       cityL1(cityInput);
 
       // Update the DOM with the retrieved data
-      city.textContent = 'City: ${city}';
+      //city.textContent = 'City: ${city}';
       temp.textContent = `Temperature: ${temperature}°C`;
       humid.textContent = `Humidity: ${humidity}%`;
       wind.textContent = `Wind Speed: ${winds} m/s`;
