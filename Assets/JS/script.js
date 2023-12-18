@@ -8,9 +8,10 @@ var temp = document.querySelector('.temperature');
 var humid = document.querySelector('.humidity');
 var wind = document.querySelector('.winds');
 var press = document.querySelector('.preassure');
+var city = document.querySelector('.city');
 
 
-// Add an event listener for the button click
+// Adding an event listener for the button click
 btn.addEventListener('click', function () {
   var cityInput = search.value.trim();
   if (cityInput !== '') {
@@ -21,10 +22,9 @@ btn.addEventListener('click', function () {
 });
 
 function citySubmit(cityInput) {
-  // Convert city name to coordinates using a geocoding API or another method
-  // Replace the placeholders below with the actual latitude and longitude coordinates
-  var latitude = 0; // Replace with actual latitude
-  var longitude = 0; // Replace with actual longitude
+  // Convert city name to coordinates
+  var latitude = 0; 
+  var longitude = 0; 
 
   var apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${keyAPIWeather}&units=metric;`
 
@@ -32,14 +32,23 @@ function citySubmit(cityInput) {
     .then(response => response.json())
     .then(data => {
       var currentWeather = data.current;
+      
 
-      // Extract the relevant information from the API response
+      // Extracting the relevant information from the API response
       var temperature = currentWeather.temp;
       var humidity = currentWeather.humidity;
       var winds = currentWeather.wind_speed;
       var pressure = currentWeather.pressure;
 
+      function cityL1(cityInput) {
+        localStorage.setItem('city', cityInput);
+        const city = localStorage.getItme('city');
+      }
+
+      cityL1(cityInput);
+
       // Update the DOM with the retrieved data
+      city.textContent = 'City: ${city}';
       temp.textContent = `Temperature: ${temperature}°C`;
       humid.textContent = `Humidity: ${humidity}%`;
       wind.textContent = `Wind Speed: ${winds} m/s`;
@@ -49,4 +58,5 @@ function citySubmit(cityInput) {
       console.error('Error:', error);
       alert('Unable to fetch weather data. Please try again later.');
     });
+
 }
